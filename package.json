@@ -1,0 +1,30 @@
+{
+  "name": "cloudformation-api",
+  "version": "1.0.0",
+  "description": "Serverless CRUD service exposing a REST HTTP interface for managing CloudFormation stacks",
+  "keywords": [
+    "aws",
+    "codebuild",
+    "codecommit",
+    "pipeline",
+    "serverless",
+    "cloudformation"
+  ],
+  "author": "Xavier Arques",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.92.0",
+    "serverless": "^1.17.1"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "test:remote": "mkdir -p .build; . ./helpers/endpoint.sh; npm run test",
+    "clean": "rm -rf node_modules && rm -rf src/node_modules",
+    "deploy": "./node_modules/.bin/serverless deploy | tee .build/deploy.out",
+    "deploy:cicd": "./node_modules/.bin/serverless deploy --stage cicd | tee .build/deploy.out",
+    "predeploy": "mkdir -p .build",
+    "predeploy:cicd": "npm run predeploy",
+    "install:lambda": "cd src; npm install; cd ..",
+    "install": "npm run install:lambda"
+  }
+}

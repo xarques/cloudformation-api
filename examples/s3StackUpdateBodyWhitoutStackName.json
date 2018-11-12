@@ -1,0 +1,3 @@
+{
+  "TemplateBody": "{\"Resources\" : { \"MyXavierArquesBucketUpdated\" : { \"Type\" : \"AWS::S3::Bucket\"}}}"
+}

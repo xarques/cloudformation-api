@@ -1,0 +1,4 @@
+{
+  "StackName": "MyEC2Stack",
+  "TemplateBody": "{\"Resources\" : { \"MyEC2Instance\" : { \"Type\" : \"AWS::EC2::Instance\", \"Properties\" : { \"ImageId\" : \"ami-82be18ed\", \"InstanceType\" : \"m1.small\"}}}}"
+}

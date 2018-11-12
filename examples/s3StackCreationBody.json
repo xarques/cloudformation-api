@@ -1,0 +1,4 @@
+{
+  "StackName": "MyS3Stack",
+  "TemplateBody": "{\"Resources\" : { \"MyXavierArquesBucket\" : { \"Type\" : \"AWS::S3::Bucket\"}}}"
+}
